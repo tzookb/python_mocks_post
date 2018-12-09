@@ -27,7 +27,7 @@ class MainTest(unittest.TestCase):
     
     @patch('src.main.some_method')
     @patch('src.main.om')
-    def test_simple_patch_on_method_internal(self, om_mock, some_method_mocked):
+    def test_simple_patch_on_method_internal_several(self, om_mock, some_method_mocked):
         om_mock.other_method.return_value = "am_mocked"
         some_method_mocked.return_value="mocked resp"
         res = main_module.main4()
